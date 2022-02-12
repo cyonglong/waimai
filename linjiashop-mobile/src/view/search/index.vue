@@ -1,8 +1,8 @@
 <template>
     <div>
 
-        <van-search placeholder="搜商品名称" v-model="listQuery.key"    @search="searchGoods" />
-        <van-divider dashed>热门商品</van-divider>
+        <van-search placeholder="搜食品名称" v-model="listQuery.key"    @search="searchGoods" />
+        <van-divider dashed>热门食品</van-divider>
 
 
         <van-card v-for="(goods,index) in goodsList" :key="index"
