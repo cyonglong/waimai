@@ -18,7 +18,8 @@ import {
     TabbarItem,
     Tag,
     Toast,
-    Button
+    Button,
+    NavBar
 } from 'vant';
 
 const baseApi = process.env.VUE_APP_BASE_API
@@ -38,7 +39,8 @@ export default {
         [Tabbar.name]: Tabbar,
         [TabbarItem.name]: TabbarItem,
         [Sku.name]: Sku,
-        [Button.name]:Button
+        [Button.name]:Button,
+        [NavBar.name]: NavBar,
     },
 
     data() {
@@ -76,6 +78,9 @@ export default {
 
     },
     methods: {
+        onClickLeft(){
+            this.$router.go(-1)
+        },
         init() {
             let id = this.$route.params.id
             goods.getGoods(id).then(response => {

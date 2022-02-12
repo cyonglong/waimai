@@ -1,5 +1,11 @@
 <template>
     <div class="goods" v-if="!offline">
+        <van-nav-bar
+            title="详情"
+            left-arrow
+            @click-left="onClickLeft"
+            fixed
+        />
         <van-swipe class="goods-swipe" :autoplay="3000">
             <van-swipe-item v-for="thumb in goods.thumb" :key="thumb">
                 <img :src="thumb">
