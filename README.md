@@ -99,6 +99,12 @@ _商品素材取自小米商城_
 - 缓存：Ehcache
 - 前端：后台管理基于[element](http://element-cn.eleme.io)，手机端界面基于[vant](https://youzan.github.io/vant/#/zh-CN/intro)
 
+##环境配置
+--node：https://nodejs.org/en/blog/release/v14.15.3/
+--npm：6.14.9
+--jdk：11.0.2
+--java version "1.8.0_311"
+
 
 ## 目录说明
 - linjiashop-admin PC端后台管理的前端网页
@@ -159,3 +165,6 @@ _商品素材取自小米商城_
 - 该项目微信小程序使用mpvue+vant-weapp，开发过程请参考相关文档：[mpvue文档](http://mpvue.com/),[vant-weapp文档](https://youzan.github.io/vant-weapp/#/intro)
 - 该项目的业务功能和部分功能代码参考复用了[litemall](https://github.com/linlinjava/litemall)，感谢[linlinjava](https://github.com/linlinjava)
 - [视频教程](https://space.bilibili.com/525325274/channel/detail?cid=115895)
+
+
+该项目为https://gitee.com/microapp/linjiashop，基础上修改，作为毕业设计。

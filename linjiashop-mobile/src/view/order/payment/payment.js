@@ -31,7 +31,11 @@ export default {
         },
         pay() {
             if(this.payType === 'wxpay'){
+                //微信方法
                 this.wxPrepare()
+                //直接支付成功
+                
+               this.$router.push('/payment/callback/'+this.order.orderSn)
             }else{
                 Toast('支付宝支付对接中...')
             }
@@ -43,7 +47,7 @@ export default {
             payApi.wxPrepare({orderSn:this.order.orderSn}).then(res => {
                 // 存储微信支付数据data
                 let data = res.data
-                //函数为分装过得  (就是调用微信支付)
+                // 函数为分装过得  (就是调用微信支付)
                 this.wxPay(
                     {
                         appId: data.appId,

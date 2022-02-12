@@ -9,6 +9,7 @@ import cn.enilu.flash.service.shop.OrderService;
 import cn.enilu.flash.service.shop.ShopUserService;
 import cn.enilu.flash.utils.StringUtil;
 import cn.enilu.flash.web.controller.BaseController;
+import com.github.binarywang.wxpay.bean.notify.WxPayNotifyResponse;
 import com.github.binarywang.wxpay.bean.order.WxPayMpOrderResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,16 +29,22 @@ public class PayController extends BaseController {
     private OrderService orderService;
     @RequestMapping(value = "wx/prepare",method = RequestMethod.POST)
     public Object wxPrepare(@RequestParam("orderSn")String orderSn){
-        ShopUser user = shopUserService.getCurrentUser();
-        if(StringUtil.isEmpty(user.getWechatOpenId())){
-            return Rets.failure("非微信用户");
-        }
+//        ShopUser user = shopUserService.getCurrentUser();
+//        if(StringUtil.isEmpty(user.getWechatOpenId())){
+//            return Rets.failure("非微信用户");
+//        }
+//        Order order = orderService.getByOrderSn(orderSn);
+//        WxPayMpOrderResult wxOrder = weixinPayService.prepare(user,order);
+//        if(wxOrder!=null) {
+//            return Rets.success(wxOrder);
+//        }
+//        return Rets.failure("数据准备异常");
         Order order = orderService.getByOrderSn(orderSn);
-        WxPayMpOrderResult wxOrder = weixinPayService.prepare(user,order);
-        if(wxOrder!=null) {
-            return Rets.success(wxOrder);
+        if (order == null) {
+            return WxPayNotifyResponse.fail("订单不存在 sn=" + orderSn);
         }
-        return Rets.failure("数据准备异常");
+        this.orderService.paySuccess(order, OrderEnum.PayTypeEnum.UN_SEND.getKey());
+        return Rets.success("wxOrder");
     }
 
     /**
@@ -47,7 +54,7 @@ public class PayController extends BaseController {
     @RequestMapping(value = "wx/notify",method = RequestMethod.POST)
     public Object wxNotify(){
         String  msg = weixinPayService.resultNotify();
-        return msg;
+        return "msg";
     }
 
     /**
