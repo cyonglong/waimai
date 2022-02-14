@@ -6,14 +6,14 @@
                 @click-left="onClickLeft"
         />
         <div class="order_detail">
-            <van-panel :title="order.consignee +' '+  order.mobile" :status="order.statusName">
+            <van-panel :title="'收货人:'+order.consignee" :desc="'电话：'+order.mobile" :status="order.statusName" style="white-space: nowrap;">
                 <div class="address_detail">
-                    {{order.consigneeAddress}}
+                    地址：{{order.consigneeAddress}}
                     <br>
                 </div>
                 <div slot="footer"
                      class="footer_btn">
-                    <van-button size="small" type="default" @click="contact">联系客服</van-button>
+                    <!-- <van-button size="small" type="default" @click="contact">联系客服</van-button> -->
                     <van-button size="small" type="danger" @click="payment" v-show="order.statusName=='待付款'">立即付款</van-button>
                     <van-button size="small" type="danger" @click="confirmReceive" v-show="order.statusName=='已发货'">确认收货</van-button>
                 </div>
@@ -77,7 +77,8 @@
             }
         }
         .address_detail{
-            padding: 5px;
+            padding: 5px 16px;
+            border-top: dotted;
         }
     }
 </style>
