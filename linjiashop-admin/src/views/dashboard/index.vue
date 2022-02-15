@@ -50,8 +50,16 @@
         </el-card>
       </el-col>
     </el-row>
-
-    <el-row>
+    <el-container>
+     <el-footer style="font-size: 44px;
+    font-family: Source Han Sans CN;
+    font-weight: 500;
+    color: #1f7af9;
+    text-align: center;
+    margin: 5% auto 3%;">欢迎使用小懒猫后台管理系统</el-footer>
+  </el-container>
+   
+    <!-- <el-row>
       <el-col :span="24">
         <div class="chart section">
         <v-chart :options="lineData" ref="lineChart"/>
@@ -115,7 +123,7 @@
 
       </el-col>
 
-    </el-row>
+    </el-row> -->
   </div>
 </template>
 
