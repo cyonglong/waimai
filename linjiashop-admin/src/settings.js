@@ -1,6 +1,6 @@
 module.exports = {
 
-  title: '邻家小铺后台管理',
+  title: '小懒猫后台管理',
 
   /**
    * @type {boolean} true | false
