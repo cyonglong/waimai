@@ -1,7 +1,7 @@
 <template>
     <div>
         <van-cell-group>
-        <van-cell :title="addrText" is-link to="address"/>
+        <van-cell :title="'选择地址：'+addrText" is-link to="address"/>
         </van-cell-group>
             <div   v-for="item in cartList"
                    :key="item.id"    class="card-goods__item">
