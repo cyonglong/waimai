@@ -53,7 +53,8 @@
         </el-col>
         <el-col :span="6">
           <el-button type="success" size="mini" icon="el-icon-search" @click.native="search">{{ $t('button.search') }}</el-button>
-          <el-button type="primary" size="mini" icon="el-icon-document" @click.native="exportXls">{{ $t('button.export') }}</el-button>
+          <!-- 导出注释 -->
+          <!-- <el-button type="primary" size="mini" icon="el-icon-document" @click.native="exportXls">{{ $t('button.export') }}</el-button> -->
           <el-button type="primary" size="mini" icon="el-icon-refresh" @click.native="reset">{{ $t('button.reset') }}</el-button>
         </el-col>
       </el-row>
@@ -113,9 +114,9 @@
             <el-dropdown-menu slot="dropdown">
               <!--<el-dropdown-item v-if="scope.row.statusName === '待付款'">修改订单</el-dropdown-item>-->
               <el-dropdown-item @click.native="addComment(scope.row.id)">订单备注</el-dropdown-item>
-              <el-dropdown-item v-if="scope.row.statusName==='已发货'" @click.native="viewShippingInfo(scope.row)">物流信息</el-dropdown-item>
+              <!-- <el-dropdown-item v-if="scope.row.statusName==='已发货'" @click.native="viewShippingInfo(scope.row)">物流信息</el-dropdown-item> -->
               <el-dropdown-item v-if="scope.row.statusName === '待发货'" @click.native="openSendOutForm(scope.row.id)">立即发货</el-dropdown-item>
-              <el-dropdown-item v-if="scope.row.payStatusName === '已付款' && scope.row.statusName !== '已退款'&& scope.row.statusName !== '退款中'">立即退款</el-dropdown-item>
+              <!-- <el-dropdown-item v-if="scope.row.payStatusName === '已付款' && scope.row.statusName !== '已退款'&& scope.row.statusName !== '退款中'">立即退款</el-dropdown-item> -->
               <el-dropdown-item @click.native="viewLog(scope.row.id)">操作日志</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
@@ -161,7 +162,8 @@
       <el-form ref="form" :model="shipping"  label-width="200px">
         <el-row>
           <el-col :span="24">
-            <el-form-item label="快递公司"  >
+            <!-- <el-form-item label="快递公司"  > -->
+            <el-form-item label="配送方式"  >
               <el-select v-model="shipping.idExpress" placeholder="请选择">
                 <el-option
                   v-for="item in expressList"
@@ -173,7 +175,8 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="快递单号"  >
+            <!-- <el-form-item label="快递单号"  > -->
+            <el-form-item label="配送员手机号"  >
               <el-input v-model="shipping.shippingSn" minlength=1></el-input>
             </el-form-item>
           </el-col>
