@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
-    <div class="block">
-      <el-row>
-        <el-col :span="24">
-          <el-button type="primary" @click="save" size="mini">{{active==3?"提交":"下一步"}}</el-button>
-          <el-button @click="prev" v-show="active>0" size="mini">上一步</el-button>
-        </el-col>
-      </el-row>
-    </div>
+<!--    <div class="block">-->
+<!--      <el-row>-->
+<!--        <el-col :span="24">-->
+<!--          <el-button type="primary" @click="save" size="mini">{{active==3?"提交":"下一步"}}</el-button>-->
+<!--          <el-button @click="prev" v-show="active>0" size="mini">上一步</el-button>-->
+<!--        </el-col>-->
+<!--      </el-row>-->
+<!--    </div>-->
     <br>
     <div class="block">
       <el-steps :active="active" finish-status="success">
