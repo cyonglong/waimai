@@ -4,9 +4,9 @@
       <el-row>
         <el-col :span="24">
           <el-button type="success" size="mini" icon="el-icon-edit" @click.native="openSendOutForm"
-                     v-show="form.statusName =='待发货'">发货
+                     v-show="form.statusName =='待发货'">立即派送
           </el-button>
-          <el-button type="default" size="mini" @click="printOrder">打 印</el-button>
+<!--          <el-button type="default" size="mini" @click="printOrder">打 印</el-button>-->
         </el-col>
       </el-row>
     </div>
@@ -94,9 +94,9 @@
           </el-form-item>
         </el-col>
         <el-col :span="8">
-          <el-form-item label="优惠券抵扣金额">
-            <span> {{formatPrice(form.couponPrice)}}</span>
-          </el-form-item>
+<!--          <el-form-item label="优惠券抵扣金额">-->
+<!--            <span> {{formatPrice(form.couponPrice)}}</span>-->
+<!--          </el-form-item>-->
         </el-col>
         <el-col :span="8">
           <el-form-item label="实付金额">
@@ -113,7 +113,7 @@
       <el-form ref="form" :model="shipping"  label-width="200px">
         <el-row>
           <el-col :span="24">
-            <el-form-item label="快递公司"  >
+            <el-form-item label="派送方式"  >
               <el-select v-model="shipping.idExpress" placeholder="请选择">
                 <el-option
                   v-for="item in expressList"
@@ -125,7 +125,7 @@
             </el-form-item>
           </el-col>
           <el-col :span="24">
-            <el-form-item label="快递单号"  >
+            <el-form-item label="配送员手机号"  >
               <el-input v-model="shipping.shippingSn" minlength=1></el-input>
             </el-form-item>
           </el-col>
