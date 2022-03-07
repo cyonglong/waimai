@@ -15,6 +15,8 @@
         <el-col :span="24">
           <el-button type="success" size="mini" icon="el-icon-plus" @click.native="add" v-permission="['/goodsEdit']">{{ $t('button.add') }}
           </el-button>
+          <el-button type="danger" size="mini" icon="el-icon-delete" @click.native="remove" >{{ $t('button.delete') }}
+          </el-button>
         </el-col>
       </el-row>
     </div>

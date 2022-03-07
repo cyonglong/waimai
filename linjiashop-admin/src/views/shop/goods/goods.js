@@ -40,6 +40,8 @@ export default {
       this.listLoading = true
       goodsApi.getList(this.listQuery).then(response => {
         this.list = response.data.records
+        //过滤删除的食品
+        this.list = this.list.filter(list=>list.isDelete===false)
         this.listLoading = false
         this.total = response.data.total
       })
@@ -95,6 +97,30 @@ export default {
     edit(id) {
         this.$router.push({path:'goodsEdit',query:{id:id}})
 
+    },
+    remove() {
+      if (this.checkSel()) {
+        const id = this.selRow.id
+        this.$confirm(this.$t('common.deleteConfirm'), this.$t('common.tooltip'), {
+          confirmButtonText: this.$t('button.submit'),
+          cancelButtonText: this.$t('button.cancel'),
+          type: 'warning'
+        }).then(() => {
+          goodsApi.remove(id).then(response => {
+            this.$message({
+              message: this.$t('common.optionSuccess'),
+              type: 'success'
+            })
+            this.fetchData()
+          }).catch(err => {
+            this.$notify.error({
+              title: '错误',
+              message: err
+            })
+          })
+        }).catch(() => {
+        })
+      }
     },
     changeIsOnSale(data){
       goodsApi.changeIsOnSale(data.id,data.isOnSale).then( response =>{
