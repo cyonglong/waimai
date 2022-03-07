@@ -22,7 +22,7 @@ export default {
             const orderSn = this.$route.params.orderSn
             this.orderSn = orderSn
             payApi.queryResult(orderSn).then(res => {
-                if(res.data === true){
+                if(res.success === true){
                     this.result="支付成功"
                     this.isSuccess = true
                 }else{
