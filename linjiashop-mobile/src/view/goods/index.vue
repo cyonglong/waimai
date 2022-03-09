@@ -42,7 +42,7 @@
         </van-cell-group>
         <van-goods-action>
             <van-goods-action-icon icon="home-o" @click="toHome" text="主页"/>
-            <van-goods-action-icon icon="like-o"  @click="like" :color="likeColor" text="喜欢"/>
+<!--            <van-goods-action-icon icon="like-o"  @click="like" :color="likeColor" text="喜欢"/>-->
             <van-goods-action-icon icon="cart-o" @click="goToCart" :info="cartCount" text="购物车"/>
             <van-goods-action-button type="danger" @click="addCart" text="立即购买"/>
         </van-goods-action>
