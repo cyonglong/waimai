@@ -15,3 +15,7 @@ INSERT INTO `t_sys_express` VALUES ('8', null, null, null, null, '	PS', '0', '�
 UPDATE `t_sys_notice` SET content = '欢迎使用小懒猫后台管理系统' WHERE id = '1';
 UPDATE `t_sys_notice` SET content = '小懒猫' WHERE id = '1';
 
+--更改浏览器标题
+UPDATE `t_sys_menu` SET name = '用户信息' WHERE id = '72';
+UPDATE `t_sys_menu` SET name = '食品管理' WHERE id = '73';
+UPDATE `t_sys_menu` SET name = '食品类别' WHERE id = '75';
