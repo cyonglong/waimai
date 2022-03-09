@@ -3,7 +3,7 @@
     <div class="block">
         <el-row  :gutter="20">
           <el-col :span="6">
-            <el-input v-model="listQuery.name" size="mini" placeholder="商品名称"></el-input>
+            <el-input v-model="listQuery.name" size="mini" placeholder="食品名称"></el-input>
           </el-col>
 
           <el-col :span="6">
@@ -55,19 +55,19 @@
           </el-switch>
         </template>
       </el-table-column>
-      <el-table-column label="是否新品推荐">
-        <template slot-scope="scope">
-          <el-tag type="success" v-show="scope.row.isNew">是</el-tag>
-          <el-tag type="warning"  v-show="!scope.row.isNew">否</el-tag>
+<!--      <el-table-column label="是否新品推荐">-->
+<!--        <template slot-scope="scope">-->
+<!--          <el-tag type="success" v-show="scope.row.isNew">是</el-tag>-->
+<!--          <el-tag type="warning"  v-show="!scope.row.isNew">否</el-tag>-->
 
-        </template>
-      </el-table-column>
-      <el-table-column label="是否人气商品">
-        <template slot-scope="scope">
-          <el-tag type="success" v-show="scope.row.isHot">是</el-tag>
-          <el-tag type="warning"  v-show="!scope.row.isHot">否</el-tag>
-        </template>
-      </el-table-column>
+<!--        </template>-->
+<!--      </el-table-column>-->
+<!--      <el-table-column label="是否人气食品">-->
+<!--        <template slot-scope="scope">-->
+<!--          <el-tag type="success" v-show="scope.row.isHot">是</el-tag>-->
+<!--          <el-tag type="warning"  v-show="!scope.row.isHot">否</el-tag>-->
+<!--        </template>-->
+<!--      </el-table-column>-->
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button type="primary" size="mini" icon="el-icon-edit" @click.native="edit(scope.row.id)" circle>

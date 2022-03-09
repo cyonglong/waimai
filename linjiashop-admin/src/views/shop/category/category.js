@@ -86,7 +86,7 @@ export default {
     },
     add() {
       this.resetForm()
-      this.formTitle = '添加商品类别'
+      this.formTitle = '添加类别'
       this.formVisible = true
       this.isAdd = true
     },
@@ -127,7 +127,7 @@ export default {
     edit(data) {
       this.isAdd = false
       this.form = data
-      this.formTitle = '编辑商品类别'
+      this.formTitle = '编辑类别'
       this.formVisible = true
 
     },

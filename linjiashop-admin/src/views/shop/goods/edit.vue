@@ -12,8 +12,8 @@
     <div class="block">
       <el-steps :active="active" finish-status="success">
         <el-step title="基本信息"></el-step>
-        <el-step title="商品相册"></el-step>
-        <el-step title="商品详情"></el-step>
+        <el-step title="食品相册"></el-step>
+        <el-step title="食品详情"></el-step>
         <el-step title="上架信息"></el-step>
       </el-steps>
     </div>
@@ -33,25 +33,25 @@
         </el-col>
         <el-col :span="24">
           <el-form-item label="类别">
-            <treeselect v-model="form.idCategory"  :options="categories"  placeholder="请选择商品类别"/>
+            <treeselect v-model="form.idCategory"  :options="categories"  placeholder="请选择食品类别"/>
           </el-form-item>
         </el-col>
-        <el-col :span="24">
-          <el-form-item label="是否新品">
-            <el-radio-group v-model="form.isNew">
-              <el-radio :label="true">是</el-radio>
-              <el-radio :label="false">否</el-radio>
-            </el-radio-group>
-          </el-form-item>
-        </el-col>
-        <el-col :span="24">
-          <el-form-item label="是否热卖">
-            <el-radio-group v-model="form.isHot">
-              <el-radio :label="true">是</el-radio>
-              <el-radio :label="false">否</el-radio>
-            </el-radio-group>
-          </el-form-item>
-        </el-col>
+<!--        <el-col :span="24">-->
+<!--          <el-form-item label="是否新品">-->
+<!--            <el-radio-group v-model="form.isNew">-->
+<!--              <el-radio :label="true">是</el-radio>-->
+<!--              <el-radio :label="false">否</el-radio>-->
+<!--            </el-radio-group>-->
+<!--          </el-form-item>-->
+<!--        </el-col>-->
+<!--        <el-col :span="24">-->
+<!--          <el-form-item label="是否热卖">-->
+<!--            <el-radio-group v-model="form.isHot">-->
+<!--              <el-radio :label="true">是</el-radio>-->
+<!--              <el-radio :label="false">否</el-radio>-->
+<!--            </el-radio-group>-->
+<!--          </el-form-item>-->
+<!--        </el-col>-->
 
 
       </el-row>
@@ -61,7 +61,7 @@
       <el-row>
 
         <el-col :span="24">
-          <el-form-item label="商品缩略图">
+          <el-form-item label="食品缩略图">
             <el-upload
               :headers="uploadHeaders"
               :action="uploadUrl"
@@ -76,7 +76,7 @@
           </el-form-item>
         </el-col>
         <el-col :span="24">
-          <el-form-item label="商品相册">
+          <el-form-item label="食品相册">
               <el-upload
                 list-type="picture-card"
                 :action="uploadUrl"
@@ -106,7 +106,7 @@
 
 
         <el-col :span="24">
-          <el-form-item label="商品规格">
+          <el-form-item label="食品规格">
             <el-radio class="radio" v-model="spec" label="one">单规格</el-radio>
             <el-radio class="radio" v-model="spec" label="more" v-show="attrKeyList.length>0">多规格</el-radio>
           </el-form-item>

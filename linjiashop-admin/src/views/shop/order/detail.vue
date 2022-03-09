@@ -56,7 +56,7 @@
           <h3>订单明细</h3>
         </el-col>
         <el-table :data="form.items" border fit  >
-          <el-table-column label="商品">
+          <el-table-column label="食品">
             <template slot-scope="scope">
               <router-link :to="{path:'goodsEdit?id='+scope.row.goods.id}">
                 {{scope.row.title}}
