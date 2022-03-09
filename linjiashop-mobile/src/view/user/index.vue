@@ -2,11 +2,11 @@
   <div>
     <img class="user-poster" src="@/assets/img/banner.jpg" >
     <van-row class="user-links">
-      <van-col span="6">
-        <van-icon name="pending-payment" @click="toOrder(1)"/>
-        待付款
-      </van-col>
-      <van-col span="6">
+<!--      <van-col span="6">-->
+<!--        <van-icon name="pending-payment" @click="toOrder(1)"/>-->
+<!--        待付款-->
+<!--      </van-col>-->
+      <van-col span="10">
         <van-icon name="tosend" @click="toOrder(2)"/>
         待发货
       </van-col>
@@ -26,7 +26,7 @@
 
     <van-cell-group>
       <van-cell icon="location-o" title="收货地址" is-link to="address"/>
-      <van-cell icon="star-o" title="喜欢的商品" is-link to="favorite"/>
+<!--      <van-cell icon="star-o" title="喜欢的商品" is-link to="favorite"/>-->
       <!-- <van-cell icon="points" title="我的积分" is-link @click="sorry"/>
       <van-cell icon="gold-coin-o" title="我的优惠券" is-link @click="sorry" />
       <van-cell icon="gift-o" title="我收到的礼物" is-link  @click="sorry"/> -->

@@ -25,7 +25,7 @@ export default {
         return {
             navList: [
                 {name:'全部',id:0},
-                {name:'待付款',id:1},
+                // {name:'待付款',id:1},
                 {name:'待发货',id:2},
                 {name:'已发货',id:3},
                 {name:'已完成',id:4},
@@ -108,7 +108,7 @@ export default {
         },
         getHandlerText(statusName){
             if(statusName==='已发货'){
-                return '确认收货'
+                return '确认取餐'
             }
             if(statusName==='待付款') {
                 return '立即付款'
