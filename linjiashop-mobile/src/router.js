@@ -28,7 +28,7 @@ const routes = [
         name: 'index',
         component: () => import('./view/index'),
         meta: {
-            title: '邻家小铺'
+            title: '小懒猫外卖'
         }
     },
     {
@@ -43,7 +43,7 @@ const routes = [
         name: 'list',
         component: () => import('./view/goods/list'),
         meta: {
-            title: '邻家小铺'
+            title: '小懒猫外卖'
         }
     },
     {
@@ -51,7 +51,7 @@ const routes = [
         name: 'goods',
         component: () => import('./view/goods'),
         meta: {
-            title: '商品详情'
+            title: '食品详情'
         }
     },
     {
@@ -138,7 +138,7 @@ const routes = [
         component: () => import('./view/favorite'),
         meta: {
             requireAuth: true,
-            title: '喜欢的商品'
+            title: '喜欢的食品'
         }
     },
     {
