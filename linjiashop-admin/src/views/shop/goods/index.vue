@@ -62,12 +62,12 @@
 
 <!--        </template>-->
 <!--      </el-table-column>-->
-<!--      <el-table-column label="是否人气食品">-->
-<!--        <template slot-scope="scope">-->
-<!--          <el-tag type="success" v-show="scope.row.isHot">是</el-tag>-->
-<!--          <el-tag type="warning"  v-show="!scope.row.isHot">否</el-tag>-->
-<!--        </template>-->
-<!--      </el-table-column>-->
+      <el-table-column label="是否人气食品">
+        <template slot-scope="scope">
+          <el-tag type="success" v-show="scope.row.isHot">是</el-tag>
+          <el-tag type="warning"  v-show="!scope.row.isHot">否</el-tag>
+        </template>
+      </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
           <el-button type="primary" size="mini" icon="el-icon-edit" @click.native="edit(scope.row.id)" circle>

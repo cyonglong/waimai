@@ -19,3 +19,9 @@ UPDATE `t_sys_notice` SET content = '小懒猫' WHERE id = '1';
 UPDATE `t_sys_menu` SET name = '用户信息' WHERE id = '72';
 UPDATE `t_sys_menu` SET name = '食品管理' WHERE id = '73';
 UPDATE `t_sys_menu` SET name = '食品类别' WHERE id = '75';
+
+--更改类别
+UPDATE `t_shop_category` SET name = '主食' WHERE id = '1';
+UPDATE `t_shop_category` SET name = '小吃' WHERE id = '2';
+UPDATE `t_shop_category` SET name = '生鲜' WHERE id = '3';
+UPDATE `t_shop_category` SET name = '饮品' WHERE id = '4';

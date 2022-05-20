@@ -44,14 +44,14 @@
 <!--            </el-radio-group>-->
 <!--          </el-form-item>-->
 <!--        </el-col>-->
-<!--        <el-col :span="24">-->
-<!--          <el-form-item label="是否热卖">-->
-<!--            <el-radio-group v-model="form.isHot">-->
-<!--              <el-radio :label="true">是</el-radio>-->
-<!--              <el-radio :label="false">否</el-radio>-->
-<!--            </el-radio-group>-->
-<!--          </el-form-item>-->
-<!--        </el-col>-->
+        <el-col :span="24">
+          <el-form-item label="是否热卖">
+            <el-radio-group v-model="form.isHot">
+              <el-radio :label="true">是</el-radio>
+              <el-radio :label="false">否</el-radio>
+            </el-radio-group>
+          </el-form-item>
+        </el-col>
 
 
       </el-row>
@@ -115,9 +115,9 @@
           <el-form-item label="库存">
             <el-input-number v-model="form.stock" :min="0" :max="100000"></el-input-number>
           </el-form-item>
-          <el-form-item label="市场价(分)">
-            <el-input-number v-model="form.marketingPrice" :min="0" :max="10000000"></el-input-number>
-          </el-form-item>
+<!--          <el-form-item label="市场价(分)">-->
+<!--            <el-input-number v-model="form.marketingPrice" :min="0" :max="10000000"></el-input-number>-->
+<!--          </el-form-item>-->
           <el-form-item label="价格(分)">
             <el-input-number v-model="form.price" :min="0" :max="10000000"></el-input-number>
           </el-form-item>
@@ -132,20 +132,20 @@
               prop="codeName"
               label="规格">
             </el-table-column>
-            <el-table-column
-              prop="marketingPrice"
-              label="市场价">
-            </el-table-column>
+<!--            <el-table-column-->
+<!--              prop="marketingPrice"-->
+<!--              label="市场价">-->
+<!--            </el-table-column>-->
 
             <el-table-column
               prop="price"
               label="价格(分)">
             </el-table-column>
 
-            <el-table-column
-              prop="stock"
-              label="库存">
-            </el-table-column>
+<!--            <el-table-column-->
+<!--              prop="stock"-->
+<!--              label="库存">-->
+<!--            </el-table-column>-->
 
             <el-table-column label="操作">
               <template slot-scope="scope">
@@ -218,15 +218,15 @@
           </el-col>
         </el-row>
 
-        <el-form-item label="市场价(分)" label-width="100px">
-          <el-input-number v-model="skuForm.marketingPrice" :min="0" :max="100000"></el-input-number>
-        </el-form-item>
+<!--        <el-form-item label="市场价(分)" label-width="100px">-->
+<!--          <el-input-number v-model="skuForm.marketingPrice" :min="0" :max="100000"></el-input-number>-->
+<!--        </el-form-item>-->
         <el-form-item label="价格(分)" label-width="100px">
           <el-input-number v-model="skuForm.price" :min="0" :max="1000000"></el-input-number>
         </el-form-item>
-        <el-form-item label="库存" label-width="100px">
-          <el-input-number v-model="skuForm.stock" :min="0" :max="100000"></el-input-number>
-        </el-form-item>
+<!--        <el-form-item label="库存" label-width="100px">-->
+<!--          <el-input-number v-model="skuForm.stock" :min="0" :max="100000"></el-input-number>-->
+<!--        </el-form-item>-->
       </el-form>
       <div slot="footer" class="dialog-footer">
         <el-button type="default" @click="closeAddSkuForm">取 消</el-button>

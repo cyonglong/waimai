@@ -26,7 +26,7 @@ export default {
     msg: '历史消息',
     msgTpl: '消息模板',
     msgSender: '消息发送器',
-    shopMgr: '商城管理',
+    shopMgr: '外卖管理',
     shopUser: '用户管理',
     shopUserDetail: '用户详情',
     category: '食品类别',

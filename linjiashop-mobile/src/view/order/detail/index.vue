@@ -13,7 +13,7 @@
                 </div>
                 <div slot="footer"
                      class="footer_btn">
-                    <!-- <van-button size="small" type="default" @click="contact">联系客服</van-button> -->
+
                     <van-button size="small" type="danger" @click="payment" v-show="order.statusName=='待付款'">立即付款</van-button>
                     <van-button size="small" type="danger" @click="confirmReceive" v-show="order.statusName=='已发货'">确认取餐</van-button>
                 </div>

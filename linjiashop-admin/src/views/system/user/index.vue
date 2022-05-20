@@ -147,41 +147,41 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="电话" prop="phone">
-              <el-input v-model="form.phone"></el-input>
-            </el-form-item>
+<!--            <el-form-item label="电话" prop="phone">-->
+<!--              <el-input v-model="form.phone"></el-input>-->
+<!--            </el-form-item>-->
           </el-col>
           <el-col :span="12">
-            <el-form-item label="所属部门">
-              <el-input
-                placeholder="请选择所属部门"
-                v-model="form.deptName"
-                readonly="readonly"
-                @click.native="deptTree.show  = !deptTree.show">
-              </el-input>
-              <el-tree v-if="deptTree.show"
-                       empty-text="暂无数据"
-                       :expand-on-click-node="false"
-                       :data="deptTree.data"
-                       :props="deptTree.defaultProps"
-                       @node-click="handleNodeClick"
-                       class="input-tree">
-              </el-tree>
+<!--            <el-form-item label="所属部门">-->
+<!--              <el-input-->
+<!--                placeholder="请选择所属部门"-->
+<!--                v-model="form.deptName"-->
+<!--                readonly="readonly"-->
+<!--                @click.native="deptTree.show  = !deptTree.show">-->
+<!--              </el-input>-->
+<!--              <el-tree v-if="deptTree.show"-->
+<!--                       empty-text="暂无数据"-->
+<!--                       :expand-on-click-node="false"-->
+<!--                       :data="deptTree.data"-->
+<!--                       :props="deptTree.defaultProps"-->
+<!--                       @node-click="handleNodeClick"-->
+<!--                       class="input-tree">-->
+<!--              </el-tree>-->
 
-            </el-form-item>
+<!--            </el-form-item>-->
           </el-col>
           <el-col :span="12">
             <el-form-item label="是否启用" prop="status">
               <el-switch v-model="form.status"></el-switch>
             </el-form-item>
           </el-col>
-          <el-col :span="12">
-            <el-form-item label="出生日期">
-              <el-date-picker type="date" placeholder="选择日期" v-model="form.birthday" style="width: 100%;">
+<!--          <el-col :span="12">-->
+<!--            <el-form-item label="出生日期">-->
+<!--              <el-date-picker type="date" placeholder="选择日期" v-model="form.birthday" style="width: 100%;">-->
 
-              </el-date-picker>
-            </el-form-item>
-          </el-col>
+<!--              </el-date-picker>-->
+<!--            </el-form-item>-->
+<!--          </el-col>-->
         </el-row>
         <el-form-item>
           <el-button type="primary" @click="saveUser">{{ $t('button.submit') }}</el-button>
